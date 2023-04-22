@@ -34,9 +34,9 @@
 		this.$element = $( element );
 		this.$content = null;
 
-		// Find and wrap all contents until next section
-		// eslint-disable-next-line no-jquery/variable-pattern
-		elements = this.$element.nextUntil( this.$element.get( 0 ).tagName.toLowerCase() );
+		// Find and wrap all contents until next section (any heading!)
+		// eslint-disable-next-line no-jquery/no-sizzle,no-jquery/variable-pattern
+		elements = this.$element.nextUntil( ':header' );
 		if ( elements.length ) {
 			this.$element.addClass( 'collapsible-header' );
 			elements.wrapAll( '<div class="collapsible-header-content" />' );
