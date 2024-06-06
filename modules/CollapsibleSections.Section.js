@@ -35,7 +35,7 @@
 		this.$content = null;
 		var currentHeading = parseInt( mw.config.get( 'wgCollapsibleSectionsTag' ).charAt( 1 ) );
 		// Find and wrap all contents until next section (any heading!)
-		// eslint-disable-next-line no-jquery/no-sizzle,no-jquery/variable-pattern
+		// eslint-disable-next-line no-jquery/variable-pattern
 		elements = this.$element.nextUntil( function () {
 			return parseInt( this.tagName.charAt( 1 ) ) <= currentHeading;
 		} );
