@@ -6,3 +6,4 @@
 /node-debug.log
 /composer.lock
 /.eslintcache
+/.stylelintcache
