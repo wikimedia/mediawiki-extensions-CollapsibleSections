@@ -30,10 +30,10 @@
 	 * @constructor
 	 */
 	function CollapsibleSection( element ) {
-		var elements;
+		let elements;
 		this.$element = $( element );
 		this.$content = null;
-		var currentHeading = parseInt( mw.config.get( 'wgCollapsibleSectionsTag' ).charAt( 1 ) );
+		const currentHeading = parseInt( mw.config.get( 'wgCollapsibleSectionsTag' ).charAt( 1 ) );
 		// Find and wrap all contents until next section (any heading!)
 		// eslint-disable-next-line no-jquery/variable-pattern
 		elements = this.$element.nextUntil( function () {

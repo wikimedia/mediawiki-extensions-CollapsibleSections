@@ -25,7 +25,7 @@
 ( function () {
 
 	// eslint-disable-next-line no-jquery/no-global-selector
-	var $mwContentsBlock = $( '.mw-parser-output' ),
+	const $mwContentsBlock = $( '.mw-parser-output' ),
 		$headings = $( $mwContentsBlock ).find( mw.config.get( 'wgCollapsibleSectionsTag' ) );
 
 	/**
@@ -42,7 +42,7 @@
 		return;
 	}
 
-	$headings.each( function ( index, element ) {
+	$headings.each( ( index, element ) => {
 		if ( $( element ).find( 'span.mw-headline' ).length ) {
 			new mw.CollapsibleSection( element );
 		}
